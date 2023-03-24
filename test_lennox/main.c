@@ -9,11 +9,17 @@
  */
 int main(void)
 {
+	int num = 245;
+	int neg = -78458;
 	char *str = "printf a simple";
 	char c = 'a';
 	_printf("Let's try to printf a simple sentence.\n");
 	printf("Let's try to printf a simple sentence.\n");
 	_printf("Let's try to printf %c simple sentence.\n", c);
 	_printf("Let's try to %s sentence.\n", str);
+	_printf("Please print %d, thanks!\n", num);
+	_printf("Please print %d, thanks!\n", neg);
+	_printf("Please print %i, thanks!\n", num);
+        _printf("Please print %i, thanks!\n", neg);
 	return (0);
 }

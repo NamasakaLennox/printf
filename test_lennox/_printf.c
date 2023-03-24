@@ -13,15 +13,19 @@ int _printf(const char *format, ...)
 	{
 		if (format[i] == '%') /* incase of specifier */
 		{
-			if (format[i + 1] == 'c') /* for character specifier */
+			switch (format[i + 1])
 			{
+			case 'c': /* for character specifier */
 				i = print_char(va_arg(ap, int), i);
 				continue;
-			}
-			if (format[i + 1] == 's')
-			{
-				/* to continue with where the string ends */
+			case 's':
 				i = print_string(va_arg(ap, char *), i);
+				continue;
+			case 'd':
+				i = print_integer(va_arg(ap, int), i);
+				continue;
+			case 'i':
+				i = print_integer(va_arg(ap, int), i);
 				continue;
 			}
 		}
