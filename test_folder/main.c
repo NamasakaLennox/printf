@@ -9,7 +9,11 @@
  */
 int main(void)
 {
-    _printf("Let's try to printf a simple sentence.\n");
-    printf("Let's try to printf a simple sentence.\n");
-    return (0);
+	char *str = "printf a simple";
+	char c = 'a';
+	_printf("Let's try to printf a simple sentence.\n");
+	printf("Let's try to printf a simple sentence.\n");
+	_printf("Let's try to printf %c simple sentence.\n", c);
+	_printf("Let's try to %s sentence.\n", str);
+	return (0);
 }
