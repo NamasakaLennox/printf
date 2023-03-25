@@ -21,5 +21,6 @@ int main(void)
 	_printf("Please print %d, thanks!\n", neg);
 	_printf("Please print %i, thanks!\n", num);
         _printf("Please print %i, thanks!\n", neg);
+	_printf("Please print %b, thanks!\n", num);
 	return (0);
 }
