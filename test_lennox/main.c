@@ -27,5 +27,7 @@ int main(void)
 	printf("Let's try to printf %u.\n", test);
 	_printf("Let's try to printf %o, %o.\n", num, neg);
         printf("Let's try to printf %o, %o.\n", num, neg);
+	_printf("Let's try to printf %x, %X.\n", num, neg);
+        printf("Let's try to printf %x, %X.\n", num, neg);
 	return (0);
 }

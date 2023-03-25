@@ -36,6 +36,12 @@ int _printf(const char *format, ...)
 			case 'o':
 				i = print_octal(va_arg(ap, unsigned int), i);
                                 continue;
+			case 'x':
+                                i = print_hexadec(va_arg(ap, unsigned int), i);
+                                continue;
+			case 'X':
+                                i = print_hexa_cap(va_arg(ap, unsigned int), i);
+                                continue;
 			}
 		}
 		_putchar(format[i]);;

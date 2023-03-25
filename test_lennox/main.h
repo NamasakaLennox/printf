@@ -13,5 +13,7 @@ int print_integer(int num, int count);
 int print_binary(unsigned int num, int count);
 int print_unsign_int(int num, int count);
 int print_octal(unsigned int num, int count);
+int print_hexadec(unsigned int num, int count);
+int print_hexa_cap(unsigned int num, int count);
 
 #endif
