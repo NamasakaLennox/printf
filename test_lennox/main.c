@@ -11,6 +11,7 @@ int main(void)
 {
 	int num = 245;
 	int neg = -78458;
+	unsigned int test = neg;
 	char *str = "printf a simple";
 	char c = 'a';
 	_printf("Let's try to printf a simple sentence.\n");
@@ -22,5 +23,7 @@ int main(void)
 	_printf("Please print %i, thanks!\n", num);
         _printf("Please print %i, thanks!\n", neg);
 	_printf("Please print %b, thanks!\n", num);
+	_printf("Let's try to printf %u.\n", test);
+	printf("Let's try to printf %u.\n", test);
 	return (0);
 }

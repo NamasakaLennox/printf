@@ -30,6 +30,9 @@ int _printf(const char *format, ...)
 			case 'b':
 				i = print_binary(va_arg(ap, int), i);
 				continue;
+			case 'u':
+				i = print_unsign_int(va_arg(ap, unsigned int), i);
+				continue;
 			}
 		}
 		_putchar(format[i]);;

@@ -11,5 +11,6 @@ int print_char(char s, int count);
 int print_string(char *str, int count);
 int print_integer(int num, int count);
 int print_binary(int num, int count);
+int print_unsign_int(int num, int count);
 
 #endif
