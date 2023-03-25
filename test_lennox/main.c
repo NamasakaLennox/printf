@@ -22,8 +22,10 @@ int main(void)
 	_printf("Please print %d, thanks!\n", neg);
 	_printf("Please print %i, thanks!\n", num);
         _printf("Please print %i, thanks!\n", neg);
-	_printf("Please print %b, thanks!\n", num);
+	_printf("Please print %b, %b, thanks!\n", num, neg);
 	_printf("Let's try to printf %u.\n", test);
 	printf("Let's try to printf %u.\n", test);
+	_printf("Let's try to printf %o, %o.\n", num, neg);
+        printf("Let's try to printf %o, %o.\n", num, neg);
 	return (0);
 }

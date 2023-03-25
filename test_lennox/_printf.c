@@ -28,11 +28,14 @@ int _printf(const char *format, ...)
 				i = print_integer(va_arg(ap, int), i);
 				continue;
 			case 'b':
-				i = print_binary(va_arg(ap, int), i);
+				i = print_binary(va_arg(ap, unsigned int), i);
 				continue;
 			case 'u':
 				i = print_unsign_int(va_arg(ap, unsigned int), i);
 				continue;
+			case 'o':
+				i = print_octal(va_arg(ap, unsigned int), i);
+                                continue;
 			}
 		}
 		_putchar(format[i]);;
