@@ -53,4 +53,10 @@ int print_hex_caps(va_list ap, flags_t *f);
 int print_binary(va_list ap, flags_t *f);
 int print_octal(va_list ap, flags_t *f);
 
+/* custom converters */
+int print_exclusive_string(va_list ap, flags_t *f);
+int print_rot13(va_list ap, flags_t *f);
+int print_reverse(va_list ap, flags_t *f);
+int print_percent(va_list ap, flags_t *f);
+
 #endif
