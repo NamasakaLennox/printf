@@ -1,13 +1,9 @@
-#ifndef MAIN_H
-#define MAIN_H
+#ifndef _MAIN_H_
+#define _MAIN_H_
 
-#include <unistd.h>
-#include <stdlib.h>
-#include <stdarg.h>
-
-int _putchar(char c);
-int _printf(const char *format, ...);
-int print_char(char s, int count);
-int print_string(char *str, int count);
+void _putchar(char c);
+void print_str(char *str);
+void print_int(int n);
+void print_hex(unsigned int n);
 
 #endif

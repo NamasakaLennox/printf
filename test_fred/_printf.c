@@ -1,34 +1,63 @@
-#include "main.h"
+#include <stdarg.h>
+#include <unistd.h>
+#include <stdlib.h>
+#include <stdio.h>
 
-int _printf(const char *format, ...)
+/**
+ * _printf - formatted output conversion and print data.
+ * @format: input string.
+ *
+ * Return: number of chars printed.
+ */
+void _printf(const char *format, ...)
 {
-	va_list ap;
-	int i;
+    va_list args;
+    va_start(args, format);
 
-	i = 0;
-	va_start(ap, format);
+    while (*format)
+    {
+        if (*format == '%')
+        {
+            format++;
+            switch (*format)
+            {
+                case 'c':
+                {
+                    char c = va_arg(args, int);
+                    _putchar(c);
+                    break;
+                }
+                case 's':
+                {
+                    char *s = va_arg(args, char *);
+                    print_str(s);
+                    break;
+                }
+                case 'd':
+                {
+                    int n = va_arg(args, int);
+                    print_int(n);
+                    break;
+                }
+                case 'x':
+                {
+                    unsigned int n = va_arg(args, unsigned int);
+                    print_hex(n);
+                    break;
+                }
+                default:
+                {
+                    _putchar('%');
+                    _putchar(*format);
+                    break;
+                }
+            }
+        } else
+        {
+            _putchar(*format);
+        }
+        format++;
+    }
 
-	/* iterate through the string */
-	while (format[i])
-	{
-		if (format[i] == '%') /* incase of specifier */
-		{
-			if (format[i + 1] == 'c') /* for character specifier */
-			{
-				i = print_char(va_arg(ap, int), i);
-				continue;
-			}
-			if (format[i + 1] == 's')
-			{
-				/* to continue with where the string ends */
-				i = print_string(va_arg(ap, char *), i);
-				continue;
-			}
-		}
-		_putchar(format[i]);;
-		i++;
-	}
-
-	va_end(ap);
-	return (0);
+    va_end(args);
 }
