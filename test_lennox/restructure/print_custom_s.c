@@ -108,3 +108,27 @@ int print_percent(va_list ap, flags_t *f)
 	(void)ap;
 	return (_putchar('%'));
 }
+
+/**
+ * print_address - prints an address of a memory location
+ * @ap: list containing the address
+ * @f: pointer to the flag struct
+ *
+ * Return: number of characters printed
+ */
+int print_address(va_list ap, flags_t *f)
+{
+	char *str;
+	unsigned long int addr = va_arg(ap, unsigned long int);
+
+	register int count = 0;
+
+	(void)f;
+
+	if (!addr)
+		return (_puts("(nil)"));
+	str = convert(addr, 16, 1);
+	count += _puts("0x");
+	count += _puts(str);
+	return (count);
+}

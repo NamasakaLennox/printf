@@ -21,9 +21,10 @@ int (*get_print(char s))(va_list, flags_t *)
 		{'r', print_reverse},
 		{'S', print_exclusive_string},
 		{'%', print_percent},
-		{'R', print_rot13}
+		{'R', print_rot13},
+		{'p', print_address}
 	};
-	int arr_size = 13;
+	int arr_size = 14;
 
 	register int i;
 
