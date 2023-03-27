@@ -9,7 +9,7 @@
  * On error, -1 is returned, and errno is set appropriately.
 
 */
-void _putchar(char c)
+void print_buf(char c)
 {
     write(1, &c, 1);
 }

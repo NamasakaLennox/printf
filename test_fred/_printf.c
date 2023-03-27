@@ -12,6 +12,7 @@
 void _printf(const char *format, ...)
 {
     va_list args;
+    int (*funtion)(va_list, char *,unsigned int);
     va_start(args, format);
 
     while (*format)
