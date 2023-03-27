@@ -11,7 +11,9 @@ int main(void)
 {
     int len = 65;
     int len2 = -65;
+    void *ptr;
 
+    ptr = (void *)0x7ffe637541f0;
     len = _printf("Let's try to printf a simple sentence.\n");
     len2 = printf("Let's try to printf a simple sentence.\n");
     _printf("Length:[%d, %i]\n", len, len);
@@ -33,6 +35,8 @@ int main(void)
     len2 = printf("Percent:[%%]\n");
     _printf("Len:[%d]\n", len);
     printf("Len:[%d]\n", len2);
+    _printf("Len:[%p]\n", ptr);
+    printf("Len:[%p]\n", ptr);
     _printf("Unknown:[%r]\n", "Reverse");
     /*printf("Unknown:[%r]\n", "Reverse");*/
     _printf("Unknown:[%R]\n", "Reverse");

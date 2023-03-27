@@ -58,5 +58,6 @@ int print_exclusive_string(va_list ap, flags_t *f);
 int print_rot13(va_list ap, flags_t *f);
 int print_reverse(va_list ap, flags_t *f);
 int print_percent(va_list ap, flags_t *f);
+int print_address(va_list ap, flags_t *f);
 
 #endif
