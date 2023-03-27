@@ -8,18 +8,24 @@
  * @plus: check for '+'
  * @space: check for ' '
  * @hash: check for '#'
- * @shorT: check for 'h'
- * @lonG: check for 'l'
  */
 typedef struct  flags
 {
 	int plus;
 	int space;
 	int hash;
+} flags_t;
+
+/**
+ * struct modifiers - checks for modifiers
+ * @shorT: check for 'h'
+ * @lonG: check for 'l'
+*/
+typedef struct modifiers
+{
 	int shorT;
 	int lonG;
-	int fWidth;
-} flags_t;
+} mod_t;
 
 /**
  * struct spec - check for specifiers
@@ -36,6 +42,7 @@ typedef struct spec
 int _printf(const char *format, ...);
 int (*get_print(char s))(va_list, flags_t *);
 int get_flag(char s, flags_t *f);
+int get_modifier(char s, mod_t *m);
 
 /* putchar */
 int _putchar(char c);
