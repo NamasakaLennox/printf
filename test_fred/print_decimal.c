@@ -6,7 +6,7 @@
  *
  * Return: the number of digits printed
  */
-int print_int(va_list ap, flags_t *f)
+int print_int(va_list ap, flags_t *f, mod_t *m)
 {
 	int num = va_arg(ap, int);
 	int count = count_digit(num);
@@ -15,11 +15,11 @@ int print_int(va_list ap, flags_t *f)
 		count += _putchar(' ');
 	if (f->plus == 1 && num >= 0)
 		count += _putchar('+');
-	if (f->shorT == 1 && num >=0)
+	if (m->shorT == 1 && num >= 0)
 	{
 		num = (short)num;
 	}
-	if (f->lonG == 1 && num >=0)
+	if (m->lonG == 1 && num >= 0)
 	{
 		num = (long)num;
 	}
@@ -36,12 +36,21 @@ int print_int(va_list ap, flags_t *f)
  *
  * Return: number of digits printed
  */
-int print_unsign(va_list ap, flags_t *f)
+int print_unsign(va_list ap, flags_t *f, mod_t *m)
 {
-	unsigned int num = va_arg(ap, unsigned int);
-	char *str = convert(num, 10, 0);
-
 	(void)f;
+	unsigned int num = va_arg(ap, unsigned int);
+	
+	if (m->shorT == 1 && num >= 0)
+	{
+		num = (short)num;
+	}
+	if (m->lonG == 1 && num >= 0)
+	{
+		num = (long)num;
+	}
+	
+	char *str = convert(num, 10, 0);
 	return (_puts(str));
 }
 

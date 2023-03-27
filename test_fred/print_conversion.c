@@ -4,17 +4,25 @@
  * print_hex - prints a hexadecimal value - lowercase
  * @ap: list containing the number
  * @f: pointer to the flag struct
- *
+ * @m: pointer to the modifier struct
  * Return: the number of digits printed
  */
-int print_hex(va_list ap, flags_t *f)
+int print_hex(va_list ap, flags_t *f, mod_t *m)
 {
 	unsigned int num = va_arg(ap, unsigned int);
-	char *str = convert(num, 16, 1);
 	int count = 0;
 
 	if (f->hash == 1 && str[0] != '0')
 		count += _puts("0x");
+	if (m->shorT == 1 && num >=0)
+	{
+		num = (short)num;
+	}
+	if (m->lonG == 1 && num >=0)
+	{
+		num = (long)num;
+	}
+	char *str = convert(num, 16, 1);
 	count += _puts(str);
 	return (count);
 }
@@ -26,7 +34,7 @@ int print_hex(va_list ap, flags_t *f)
  *
  * Return: the number of digits printed
  */
-int print_hex_caps(va_list ap, flags_t *f)
+int print_hex_caps(va_list ap, flags_t *f, mod_t *m)
 {
 	unsigned int num = va_arg(ap, unsigned int);
 	char *str = convert(num, 16, 0);
@@ -34,6 +42,14 @@ int print_hex_caps(va_list ap, flags_t *f)
 
 	if (f->hash == 1 && str[0] != '0')
 		count += _puts("0X");
+	if (m->shorT == 1 && num >= 0)
+	{
+		num = (short)num;
+	}
+	if (m->lonG == 1 && num >= 0)
+	{
+		num = (long)num;
+	}
 	count += _puts(str);
 	return (count);
 }
@@ -48,9 +64,16 @@ int print_hex_caps(va_list ap, flags_t *f)
 int print_binary(va_list ap, flags_t *f)
 {
 	unsigned int num = va_arg(ap, unsigned int);
-	char *str = convert(num, 2, 0);
-
 	(void)f;
+	if (m->shorT == 1 && num >= 0)
+	{
+		num = (short)num;
+	}
+	if (m->lonG == 1 && num >= 0)
+	{
+		num = (long)num;
+	}
+	char *str = convert(num, 2, 0);S
 	return (_puts(str));
 }
 

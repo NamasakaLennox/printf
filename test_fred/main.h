@@ -53,9 +53,9 @@ int print_char(va_list ap, flags_t *f);
 int print_string(va_list ap, flags_t *f);
 
 /* print numbers */
-int print_int(va_list ap, flags_t *f);
+int print_int(va_list ap, flags_t *f, mod_t *m);
 void print_number(int num);
-int print_unsign(va_list ap, flags_t *f);
+int print_unsign(va_list ap, flags_t *f, mod_t *m);
 int count_digit(int num);
 char *convert(unsigned long int num, int base, int lowercase);
 
