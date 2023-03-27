@@ -8,12 +8,16 @@
  * @plus: check for '+'
  * @space: check for ' '
  * @hash: check for '#'
+ * @shorT: check for 'h'
+ * @lonG: check for 'l'
  */
 typedef struct  flags
 {
 	int plus;
 	int space;
 	int hash;
+	int shorT;
+	int lonG;
 } flags_t;
 
 /**
