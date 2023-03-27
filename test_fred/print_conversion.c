@@ -76,7 +76,7 @@ int print_binary(va_list ap, flags_t *f)
 		num = (long)num;
 	}
 	char *str = convert(num, 2, 0);
-	
+
 	return (_puts(str));
 }
 
@@ -87,14 +87,16 @@ int print_binary(va_list ap, flags_t *f)
  *
  * Return: the number of digits printed
  */
-int print_octal(va_list ap, flags_t *f)
+int print_octal(va_list ap, flags_t *f, mod_t *m)
 {
 	unsigned int num = va_arg(ap, unsigned int);
 	char *str = convert(num, 8, 0);
 	int count = 0;
+	(void)m;
 
 	if (f->hash == 1 && str[0] != '0')
 		count += _putchar('0');
 	count += _puts(str);
+
 	return (count);
 }

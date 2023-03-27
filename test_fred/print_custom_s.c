@@ -10,13 +10,15 @@
  *
  * Return: the number of characters printed
  */
-int print_exclusive_string(va_list ap, flags_t *f)
+int print_exclusive_string(va_list ap, flags_t *f, mod_t *m)
 {
 	int i, count = 0;
 	char *ptr;
 	char *str = va_arg(ap, char *);
 
 	(void)f;
+	(void)m;
+
 	if (!str)
 		return (_puts("(null)"));
 
@@ -44,12 +46,14 @@ int print_exclusive_string(va_list ap, flags_t *f)
  *
  * Return: the number of characters printed
  */
-int print_reverse(va_list ap, flags_t *f)
+int print_reverse(va_list ap, flags_t *f, mod_t *m)
 {
 	int i = 0, j;
 	char *str = va_arg(ap, char *);
 
 	(void)f;
+	(void)m;
+
 	if (!str)
 		str = "(null)";
 	while (str[i])
@@ -66,7 +70,7 @@ int print_reverse(va_list ap, flags_t *f)
  *
  * Return: number of characters printed
  */
-int print_rot13(va_list ap, flags_t *f)
+int print_rot13(va_list ap, flags_t *f, mod_t *m)
 {
 	int i, j;
 	char alpha[] = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ";
@@ -74,6 +78,8 @@ int print_rot13(va_list ap, flags_t *f)
 	char *str = va_arg(ap, char *);
 
 	(void)f;
+	(void)m;
+	
 	for (i = 0; str[i]; i++)
 	{
 		if ((str[i] < 'A' || str[i] > 'Z') && (str[i] < 'a' ||
@@ -102,10 +108,12 @@ int print_rot13(va_list ap, flags_t *f)
  *
  * Return: returns 1, chars printed
  */
-int print_percent(va_list ap, flags_t *f)
+int print_percent(va_list ap, flags_t *f, mod_t *m)
 {
 	(void)f;
 	(void)ap;
+	(void)m;
+
 	return (_putchar('%'));
 }
 
@@ -116,7 +124,7 @@ int print_percent(va_list ap, flags_t *f)
  *
  * Return: number of characters printed
  */
-int print_address(va_list ap, flags_t *f)
+int print_address(va_list ap, flags_t *f, mod_t *m)
 {
 	char *str;
 	unsigned long int addr = va_arg(ap, unsigned long int);
@@ -124,6 +132,7 @@ int print_address(va_list ap, flags_t *f)
 	register int count = 0;
 
 	(void)f;
+	(void)m;
 
 	if (!addr)
 		return (_puts("(nil)"));
