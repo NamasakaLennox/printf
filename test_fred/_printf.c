@@ -33,7 +33,7 @@ int _printf(const char *format, ...)
 			}
 			while (get_flag(*ptr, &flags))
 				ptr++;
-			while(get_modifier(*ptr, &flags))
+			while (get_modifier(*ptr, &modifiers))
 				ptr++;
 			pfunc = get_print(*ptr); /* function to perform */
 			count += (pfunc)

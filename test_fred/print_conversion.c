@@ -51,6 +51,7 @@ int print_hex_caps(va_list ap, flags_t *f, mod_t *m)
 		num = (long)num;
 	}
 	count += _puts(str);
+
 	return (count);
 }
 
