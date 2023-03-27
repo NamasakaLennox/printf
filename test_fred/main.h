@@ -49,8 +49,8 @@ int _putchar(char c);
 int _puts(char *str);
 
 /* alphabet */
-int print_char(va_list ap, flags_t *f);
-int print_string(va_list ap, flags_t *f);
+int print_char(va_list ap, flags_t *f, mod_t *m);
+int print_string(va_list ap, flags_t *f, mod_t *m);
 
 /* print numbers */
 int print_int(va_list ap, flags_t *f, mod_t *m);
@@ -60,16 +60,16 @@ int count_digit(int num);
 char *convert(unsigned long int num, int base, int lowercase);
 
 /* conversions from decimal */
-int print_hex(va_list ap, flags_t *f);
-int print_hex_caps(va_list ap, flags_t *f);
-int print_binary(va_list ap, flags_t *f);
-int print_octal(va_list ap, flags_t *f);
+int print_hex(va_list ap, flags_t *f, mod_t *m);
+int print_hex_caps(va_list ap, flags_t *f, mod_t *m);
+int print_binary(va_list ap, flags_t *f, mod_t *m);
+int print_octal(va_list ap, flags_t *f, mod_t *m);
 
 /* custom converters */
-int print_exclusive_string(va_list ap, flags_t *f);
-int print_rot13(va_list ap, flags_t *f);
-int print_reverse(va_list ap, flags_t *f);
-int print_percent(va_list ap, flags_t *f);
-int print_address(va_list ap, flags_t *f);
+int print_exclusive_string(va_list ap, flags_t *f, mod_t *m);
+int print_rot13(va_list ap, flags_t *f, mod_t *m);
+int print_reverse(va_list ap, flags_t *f, mod_t *m);
+int print_percent(va_list ap, flags_t *f, mod_t *m);
+int print_address(va_list ap, flags_t *f, mod_t *m);
 
 #endif

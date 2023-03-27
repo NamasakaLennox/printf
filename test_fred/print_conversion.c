@@ -63,10 +63,11 @@ int print_hex_caps(va_list ap, flags_t *f, mod_t *m)
  *
  * Return: the number of digits printed
  */
-int print_binary(va_list ap, flags_t *f)
+int print_binary(va_list ap, flags_t *f, mod_t *m)
 {
 	unsigned int num = va_arg(ap, unsigned int);
 	(void)f;
+
 	if (m->shorT == 1 && num >= 0)
 	{
 		num = (short)num;

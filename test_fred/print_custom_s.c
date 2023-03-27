@@ -15,7 +15,6 @@ int print_exclusive_string(va_list ap, flags_t *f, mod_t *m)
 	int i, count = 0;
 	char *ptr;
 	char *str = va_arg(ap, char *);
-
 	(void)f;
 	(void)m;
 
@@ -130,7 +129,6 @@ int print_address(va_list ap, flags_t *f, mod_t *m)
 	unsigned long int addr = va_arg(ap, unsigned long int);
 
 	register int count = 0;
-
 	(void)f;
 	(void)m;
 
