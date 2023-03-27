@@ -25,9 +25,10 @@ int print_string(va_list ap, flags_t *f)
  *
  * Return: the number of chars printed, 1
  */
-int print_char(va_list ap, flags_t *f)
+int print_char(va_list ap, flags_t *f, mod_t *m)
 {
 	(void)f;
+	(void)m;
 
 	_putchar(va_arg(ap, int));
 	return (1);

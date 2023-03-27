@@ -14,16 +14,17 @@ int print_hex(va_list ap, flags_t *f, mod_t *m)
 
 	if (f->hash == 1 && str[0] != '0')
 		count += _puts("0x");
-	if (m->shorT == 1 && num >=0)
+	if (m->shorT == 1 && num >=0 )
 	{
 		num = (short)num;
 	}
-	if (m->lonG == 1 && num >=0)
+	if (m->lonG == 1 && num >=0 )
 	{
 		num = (long)num;
 	}
 	char *str = convert(num, 16, 1);
 	count += _puts(str);
+
 	return (count);
 }
 
@@ -74,7 +75,8 @@ int print_binary(va_list ap, flags_t *f)
 	{
 		num = (long)num;
 	}
-	char *str = convert(num, 2, 0);S
+	char *str = convert(num, 2, 0);
+	
 	return (_puts(str));
 }
 
