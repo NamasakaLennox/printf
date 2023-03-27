@@ -18,8 +18,12 @@ int (*get_print(char s))(va_list, flags_t *)
 		{'X', print_hex_caps},
 		{'b', print_binary},
 		{'o', print_octal},
+		{'r', print_reverse},
+		{'S', print_exclusive_string},
+		{'%', print_percent},
+		{'R', print_rot13}
 	};
-	int arr_size = 9;
+	int arr_size = 13;
 
 	register int i;
 
