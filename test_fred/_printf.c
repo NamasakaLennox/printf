@@ -11,7 +11,7 @@ int _printf(const char *format, ...)
 	va_list ap;
 	const char *ptr;
 	int (*pfunc)(va_list, flags_t *);
-	flags_t flags = {0, 0, 0};
+	flags_t flags = {0, 0, 0, 0, 0, 0};
 
 	register int count = 0;
 
