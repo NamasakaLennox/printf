@@ -15,6 +15,14 @@ int print_int(va_list ap, flags_t *f)
 		count += _putchar(' ');
 	if (f->plus == 1 && num >= 0)
 		count += _putchar('+');
+	if (f->shorT == 1 && num >=0)
+	{
+		num = (short)num;
+	}
+	if (f->lonG == 1 && num >=0)
+	{
+		num = (long)num;
+	}
 	if (num <= 0)
 		count++;
 	print_number(num);
