@@ -47,11 +47,11 @@ int print_unsign(va_list ap, flags_t *f, mod_t *m)
 	(void)f;
 	if (m->shorT == 1)
 	{
-		num = (short)num;
+		num = (unsigned short)num;
 	}
 	if (m->lonG == 1)
 	{
-		num = (long)num;
+		num = (unsigned long)num;
 	}
 
 	str = convert(num, 10, 0);

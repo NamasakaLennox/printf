@@ -14,17 +14,17 @@ int print_hex(va_list ap, flags_t *f, mod_t *m)
 	int count = 0;
 	char *str;
 
-	str = convert(num, 16, 1);
-	if (f->hash == 1 && str[0] != '0')
-		count += _puts("0x");
 	if (m->shorT == 1)
 	{
-		num = (short)num;
+		num = (unsigned short)num;
 	}
 	if (m->lonG == 1)
 	{
-		num = (long)num;
+		num = (unsigned long)num;
 	}
+	str = convert(num, 16, 1);
+	if (f->hash == 1 && str[0] != '0')
+		count += _puts("0x");
 	count += _puts(str);
 
 	return (count);
@@ -44,17 +44,17 @@ int print_hex_caps(va_list ap, flags_t *f, mod_t *m)
 	char *str;
 	int count = 0;
 
-	str = convert(num, 16, 0);
-	if (f->hash == 1 && str[0] != '0')
-		count += _puts("0X");
 	if (m->shorT == 1)
 	{
-		num = (short)num;
+		num = (unsigned short)num;
 	}
 	if (m->lonG == 1)
 	{
-		num = (long)num;
+		num = (unsigned long)num;
 	}
+	str = convert(num, 16, 0);
+	if (f->hash == 1 && str[0] != '0')
+		count += _puts("0X");
 	count += _puts(str);
 
 	return (count);
@@ -95,17 +95,17 @@ int print_octal(va_list ap, flags_t *f, mod_t *m)
 
 	(void)m;
 
-	str = convert(num, 8, 0);
-	if (f->hash == 1 && str[0] != '0')
-		count += _putchar('0');
 	if (m->shorT == 1)
 	{
-		num = (short)num;
+		num = (unsigned short)num;
 	}
 	if (m->lonG == 1)
 	{
-		num = (long)num;
+		num = (unsigned long)num;
 	}
+	str = convert(num, 8, 0);
+	if (f->hash == 1 && str[0] != '0')
+		count += _putchar('0');
 	count += _puts(str);
 
 	return (count);

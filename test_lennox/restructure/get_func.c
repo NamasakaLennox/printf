@@ -6,7 +6,7 @@
  *
  * Return: pointer to the respective function
  */
-int (*get_print(char s))(va_list, flags_t *)
+int (*get_print(char s))(va_list, flags_t *, mod_t *)
 {
 	specifier sp[] = {
 		{'c', print_char},

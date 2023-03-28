@@ -12,6 +12,7 @@ int main(void)
     int len = 65;
     int len2 = -65;
     void *ptr;
+    long int lp = 65;
 
     ptr = (void *)0x7ffe637541f0;
     len = _printf("Let's try to printf a simple sentence.\n");
@@ -42,5 +43,7 @@ int main(void)
     _printf("Unknown:[%R]\n", "Reverse");
     _printf("Unknown:[%R]\n", "Erirefr");
     _printf("%S\n", "Best\nSchool");
+    _printf("Mod:[%ld], [%hd]\n", 65, -65);
+    printf("Mod:[%ld], [%hd]\n", lp, -65);
     return (0);
 }
