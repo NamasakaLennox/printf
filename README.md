@@ -71,3 +71,125 @@ Using flags and length tags:
 	+ Use: `_printf("1 million as a long int is %ld, but as a short int is %hd", 1000000, 1000000);`
 	+ Output: `1 million as a long int is 1000000, but as a short int is 16960`
 	 
+
+## File Functions
+
+### _printf.c
+Own Printf Function Tha Performs Formatted Output Conversion And Print Data.
+
+------------
+
+### main.h
+Header File Were All Prototypes Are Saved.
+
+------------
+
+### get_print
+Pointer To A Function That Selects The Correct Function To Perform The Operation.
+
+------------
+
+### _putchar
+Function That Prints .
+
+------------
+
+### _puts
+Function That Prints a string in the standard output.
+
+------------
+
+
+### print_char
+Function That Writes The Character C To Stdout.
+```c
+/* Indetifier : %c */
+```
+
+------------
+
+### print_string
+Function That Writes The String To Stdout.
+```c
+/* Indetifier : %s */
+```
+
+------------
+
+### print_int
+Function That Prints An Integer.
+```c
+/* Indetifier : %i or %d */
+```
+
+------------
+
+### print_bin
+Function That Prints Decimal In Binary.
+```c
+/* Indetifier : %b */
+```
+
+------------
+
+### print_octal
+Function That Prints Decimal In Octal.
+```c
+/* Indetifier : %o */
+```
+
+------------
+
+### print_hex
+Function That Prints Decimal In Hexadecimal.
+```c
+/* Indetifier : %x */
+```
+
+------------
+
+### print_hex_caps
+Function That Prints Decimal In Uppercase Hexadecimal.
+```c
+/* Indetifier : %X */
+```
+
+------------
+
+### print_usr.c
+Function That Prints A String And Values Of Non-Printed Chars.
+```c
+/* Indetifier : %S */
+```
+
+------------
+
+### print_unt.c
+Function That Prints An Unsigned Integer.
+```c
+/* Indetifier : %u */
+```
+
+------------
+
+### print_reverse.c
+Function That Writes The String To Stdout In Reverse.
+```c
+/* Indetifier : %r */
+```
+
+------------
+
+### print_rot13.c
+Function That Writes The String To Stdout In Rot13.
+```c
+/* Indetifier : %R */
+```
+
+------------
+
+### print_address
+Function That Prints The Address Of An Input Variable.
+```c
+/* Indetifier : %p */
+```
