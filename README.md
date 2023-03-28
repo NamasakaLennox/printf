@@ -193,3 +193,15 @@ Function That Prints The Address Of An Input Variable.
 ```c
 /* Indetifier : %p */
 ```
+----------
+Logic Flowchart
+------------
+The following diagram illustrates the logic of the **_printf** function in this repository.
+![flow-chart-img](https://raw.githubusercontent.com/NamasakaLennox/printf/main/images/flow.jpeg)
+
+### Authors
+[**Lennox Namasaka**](https://github.com/NamasakaLennox) and [**Fredrick Kyeki**](https://github.com/FREDRICKKYEKI).
+
+------------
+
+### End
