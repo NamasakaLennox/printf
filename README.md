@@ -2,7 +2,7 @@
 ![alx-logo](https://raw.githubusercontent.com/NamasakaLennox/printf/main/images/alx-application-logo.png)
 
 ## printf()
-The printf project is a collaboration between **Lennox Namasaka** and **Fredrick Kyeki**, who are students of the ALX Software Engineering program.The project is named **"_printf"**, and imitates the actual **"printf**" command located in the stdio.h library in the c - programming language. It contains some of the basic features and functions found in the manual 3 of "printf".
+The printf project is a collaboration between [**Lennox Namasaka**](https://github.com/NamasakaLennox) and [**Fredrick Kyeki**](https://github.com/FREDRICKKYEKI)., who are students of the ALX Software Engineering program.The project is named **"_printf"**, and imitates the actual **"printf**" command located in the stdio.h library in the c - programming language. It contains some of the basic features and functions found in the manual 3 of "printf".
 
 **_printf()** is a function that performs formatted output conversion and print data. This is it's prototype:
 
@@ -65,12 +65,12 @@ Using flags and length tags:
 
 5. Printing the string of chars "Hello, ALX":
 	+ Use: `_printf("2 * 2 = %+d and 5 * -5 = %+i", 4, -25);`
-	+ Output: `2 * 2 = +4 and 5 * -5 = -25`
+	+ Output: `2 * 2 = +4 and 5 * -5 we= -25`
 	
 6. Printing a long integer number and short integer number:
 	+ Use: `_printf("1 million as a long int is %ld, but as a short int is %hd", 1000000, 1000000);`
 	+ Output: `1 million as a long int is 1000000, but as a short int is 16960`
-	 
+	
 
 ## File Functions
 
@@ -156,23 +156,12 @@ Function That Prints Decimal In Uppercase Hexadecimal.
 
 ------------
 
-### print_usr.c
-Function That Prints A String And Values Of Non-Printed Chars.
-```c
-/* Indetifier : %S */
-```
+------------
+
 
 ------------
 
-### print_unt.c
-Function That Prints An Unsigned Integer.
-```c
-/* Indetifier : %u */
-```
-
-------------
-
-### print_reverse.c
+### print_reverse
 Function That Writes The String To Stdout In Reverse.
 ```c
 /* Indetifier : %r */
@@ -180,7 +169,7 @@ Function That Writes The String To Stdout In Reverse.
 
 ------------
 
-### print_rot13.c
+### print_rot13
 Function That Writes The String To Stdout In Rot13.
 ```c
 /* Indetifier : %R */
@@ -205,3 +194,5 @@ The following diagram illustrates the logic of the **_printf** function in this 
 ------------
 
 ### End
+
+
