@@ -35,12 +35,12 @@ typedef struct modifiers
 typedef struct spec
 {
 	char c;
-	int (*f)(va_list ap, flags_t *f);
+	int (*f)(va_list ap, flags_t *f, mod_t *);
 } specifier;
 
 /* printf */
 int _printf(const char *format, ...);
-int (*get_print(char s))(va_list, flags_t *);
+int (*get_print(char s))(va_list, flags_t *, mod_t *);
 int get_flag(char s, flags_t *f);
 int get_modifier(char s, mod_t *m);
 

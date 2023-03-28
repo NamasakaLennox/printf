@@ -10,8 +10,9 @@ int _printf(const char *format, ...)
 {
 	va_list ap;
 	const char *ptr;
-	int (*pfunc)(va_list, flags_t *);
+	int (*pfunc)(va_list, flags_t *, mod_t *);
 	flags_t flags = {0, 0, 0};
+	mod_t modifiers = {0, 0};
 
 	register int count = 0;
 
@@ -32,9 +33,11 @@ int _printf(const char *format, ...)
 			}
 			while (get_flag(*ptr, &flags))
 				ptr++;
+			while (get_modifier(*ptr, &modifiers))
+				ptr++;
 			pfunc = get_print(*ptr); /* function to perform */
 			count += (pfunc)
-				? pfunc(ap, &flags) /* if found */
+				? pfunc(ap, &flags, &modifiers) /* if found */
 				: _printf("%%%c", *ptr); /* false */
 		}
 		else

@@ -10,7 +10,7 @@ int _printf(const char *format, ...)
 {
 	va_list ap;
 	const char *ptr;
-	int (*pfunc)(va_list, flags_t *);
+	int (*pfunc)(va_list, flags_t *, mod_t *);
 	flags_t flags = {0, 0, 0};
 	mod_t modifiers = {0, 0};
 

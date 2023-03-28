@@ -3,13 +3,14 @@
  * print_int - prints an integer value
  * @ap: list containing the number
  * @f: pointer to the flag struct
+ * @m: pointer to the modifier struct
  *
  * Return: the number of digits printed
  */
 int print_int(va_list ap, flags_t *f, mod_t *m)
 {
 	int num = va_arg(ap, int);
-	int count = count_digit(num);
+	int count = 0;
 
 	if (f->space == 1 && f->plus == 0 && num >= 0)
 		count += _putchar(' ');
@@ -23,6 +24,7 @@ int print_int(va_list ap, flags_t *f, mod_t *m)
 	{
 		num = (long)num;
 	}
+	count += count_digit(num);
 	if (num <= 0)
 		count++;
 	print_number(num);
@@ -33,25 +35,27 @@ int print_int(va_list ap, flags_t *f, mod_t *m)
  * print_unsign - prints an unsigned integer
  * @ap: list containing the number
  * @f: pointer to the flag struct
+ * @m: pointer to the modifier struct
  *
  * Return: number of digits printed
  */
 int print_unsign(va_list ap, flags_t *f, mod_t *m)
 {
-	(void)f;
 	unsigned int num = va_arg(ap, unsigned int);
-	
-	if (m->shorT == 1 && num >= 0)
+	char *str;
+
+	(void)f;
+	if (m->shorT == 1)
 	{
 		num = (short)num;
 	}
-	if (m->lonG == 1 && num >= 0)
+	if (m->lonG == 1)
 	{
 		num = (long)num;
 	}
-	
-	char *str = convert(num, 10, 0);
-	
+
+	str = convert(num, 10, 0);
+
 	return (_puts(str));
 }
 

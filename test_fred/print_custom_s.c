@@ -4,6 +4,8 @@
  * print_exclusive_string - prints a string
  * @ap: list containing the sting
  * @f: pointer to the flag struct
+ * @m: pointer to the modifier struct
+ *
  * Description: Non printable characters (0 < ASCII value < 32 or >= 127)
  * are printed this way: \x, followed by the ASCII code value
  * in hexadecimal upper case - always 2 characters
@@ -42,6 +44,7 @@ int print_exclusive_string(va_list ap, flags_t *f, mod_t *m)
  * print_reverse - prints a string in reverse
  * @ap: list containing the string
  * @f: pointer to the flag struct
+ * @m: pointer to the modifier struct
  *
  * Return: the number of characters printed
  */
@@ -66,6 +69,7 @@ int print_reverse(va_list ap, flags_t *f, mod_t *m)
  * print_rot13 - encrypts in rot13
  * @ap: list of arguments containing string
  * @f: pointer to the flag structs
+ * @m: pointer to the modifier struct
  *
  * Return: number of characters printed
  */
@@ -78,7 +82,7 @@ int print_rot13(va_list ap, flags_t *f, mod_t *m)
 
 	(void)f;
 	(void)m;
-	
+
 	for (i = 0; str[i]; i++)
 	{
 		if ((str[i] < 'A' || str[i] > 'Z') && (str[i] < 'a' ||
@@ -104,6 +108,7 @@ int print_rot13(va_list ap, flags_t *f, mod_t *m)
  * print_percent - prints the percentage symbol
  * @ap: list arguments
  * @f: pointer to the struct flags
+ * @m: pointer to the modifier struct
  *
  * Return: returns 1, chars printed
  */
@@ -120,6 +125,7 @@ int print_percent(va_list ap, flags_t *f, mod_t *m)
  * print_address - prints an address of a memory location
  * @ap: list containing the address
  * @f: pointer to the flag struct
+ * @m: pointer to the modifier struct
  *
  * Return: number of characters printed
  */
@@ -129,6 +135,7 @@ int print_address(va_list ap, flags_t *f, mod_t *m)
 	unsigned long int addr = va_arg(ap, unsigned long int);
 
 	register int count = 0;
+
 	(void)f;
 	(void)m;
 
